@@ -1,5 +1,5 @@
 import os
-
+#menu
 def Numeros(n):
     posi = 0
     nega = 0
@@ -21,18 +21,20 @@ def Numeros(n):
     print("La cantidad de numeros positivos es de: ", posi)
     print("La cantidad de numeros negativos es de: ", nega)
     print("La cantidad de numeros iguales a 0 es de: ", cero)
-
+    print("")
     pause = input("Digite cualquier tecla para continuar: ")
     
 def Personas(n):
     totaledad = 0
     prom = 0
     for i in range (n):
+        print("")
         nom = input("Ingrese nombre: ")
         edad = int(input("Ingrese edad: "))
         totaledad = totaledad+edad
 
     prom = round((totaledad/n),1)
+    print("")
     print("El promedio de edades de las personas ingresadas es de: ",prom)
     pause = input("Digite cualquier tecla para continuar: ")
 
@@ -43,20 +45,24 @@ n = 0
 while (seguir):
     os.system('cls')
 
+    print("Menu: ")
+    print("")
     print("1. Numeros")
-    print("2. Daatos Personales")
+    print("2. Datos Personales")
     print("3. Finalizar")
+    print("")
     
     op = int(input("Digite opcion 1, 2 o 3: "))
 
     if(op==1):
+        os.system('cls')
         n = int(input("Ingrese una cantidad de numeros: "))
         Numeros(n)
     if(op==2):
+        os.system('cls')
         n = int(input("Ingrese una cantidad de personas: "))
         Personas(n)
     if(op==3):
         print("Programa finalizado!")
-        pause = input("Digite cualquier tecla para continuar: ")
         break
     
